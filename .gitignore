@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local temporary website assets
+contact-section.txt
+Technovate logo.jpg
