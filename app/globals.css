@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 :root {
@@ -20,6 +21,7 @@
   --color-muted: var(--muted);
   --color-light-blue: var(--light-blue);
   --color-border: var(--border);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -34,9 +36,11 @@ html {
 
 body {
   margin: 0;
+  min-width: 320px;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -54,6 +58,7 @@ button {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
@@ -62,11 +67,23 @@ img {
   margin-inline: auto;
 }
 
-@media (max-width: 640px) {
-  .container {
-    width: min(100% - 28px, 1180px);
-  }
+section,
+header,
+footer {
+  min-width: 0;
 }
+
+.grid > *,
+.flex > * {
+  min-width: 0;
+}
+
+/* Smooth anchor scrolling with room for the sticky header */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Hero text marquee */
 @keyframes heroTextMarquee {
   from {
     transform: translateX(100%);
@@ -78,17 +95,56 @@ img {
 }
 
 .hero-marquee {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  width: 100%;
 }
 
 .hero-marquee-track {
   display: inline-flex;
   width: max-content;
+  max-width: none;
   animation: heroTextMarquee 18s linear infinite;
+  will-change: transform;
 }
 
 .hero-marquee-item {
+  flex-shrink: 0;
   padding-right: 4rem;
 }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-marquee-track {
+    animation: none;
+    transform: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .hero-marquee-track {
+    animation-duration: 15s;
+  }
+
+  .hero-marquee-item {
+    padding-right: 2.5rem;
+  }
+}
+

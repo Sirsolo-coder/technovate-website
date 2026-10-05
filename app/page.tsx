@@ -1,4 +1,5 @@
-﻿"use client";
+﻿
+"use client";
 
 import { useState } from "react";
 import MobileMenu from "./components/MobileMenu";
@@ -137,7 +138,7 @@ const projects = [
   {
     category: "Environmental AI",
     filterCategory: "Software & AI",
-    title: "Wildlife Conservation in CÃ´te dâ€™Ivoire",
+    title: "Wildlife Conservation in Côte d’Ivoire",
     description:
       "A computer vision learning project exploring image-based classification in a wildlife conservation context.",
     status: "Learning Project",
@@ -206,7 +207,9 @@ export default function Home() {
   const filteredProjects =
     activeFilter === "All Projects"
       ? projects
-      : projects.filter((project) => project.filterCategory === activeFilter);
+      : projects.filter(
+          (project) => project.filterCategory === activeFilter
+        );
 
   return (
     <main>
@@ -215,52 +218,60 @@ export default function Home() {
         <div className="container relative flex h-20 items-center justify-between">
           <a href="#home" className="flex items-center gap-3">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-  <img
-    src="/technovate-logo.jpg"
-    alt="Technovate Global Solutions Ltd"
-    className="h-full w-full object-cover"
-  />
-</div>
+              <img
+                src="/technovate-logo.jpg"
+                alt="Technovate Global Solutions Ltd"
+                className="h-full w-full object-cover"
+              />
+            </div>
 
             <div>
               <div className="text-lg font-extrabold tracking-tight text-[#071A33]">
-  TECHNOVATE
-</div>
+                TECHNOVATE
+              </div>
 
-<div className="text-[9px] font-semibold tracking-[0.16em] text-slate-500">
-  GLOBAL SOLUTIONS LIMITED
-</div>
+              <div className="text-[9px] font-semibold tracking-[0.16em] text-slate-500">
+                GLOBAL SOLUTIONS LIMITED
+              </div>
             </div>
           </a>
 
           <nav className="hidden items-center gap-7 lg:flex">
-            <a href="#home" className="text-sm font-semibold text-[#007AFF]">
+            <a
+              href="#home"
+              className="text-sm font-semibold text-[#007AFF]"
+            >
               Home
             </a>
+
             <a
               href="#about"
               className="text-sm font-medium text-slate-600 transition hover:text-[#007AFF]"
             >
               About Us
             </a>
+
             <a
               href="#services"
               className="text-sm font-medium text-slate-600 transition hover:text-[#007AFF]"
             >
               Services
             </a>
+
             <a
               href="#projects"
               className="text-sm font-medium text-slate-600 transition hover:text-[#007AFF]"
             >
               Projects
             </a>
+
             <a
               href="#blog"
               className="text-sm font-medium text-slate-600 transition hover:text-[#007AFF]"
             >
               Blog
             </a>
+
             <a
               href="#contact"
               className="text-sm font-medium text-slate-600 transition hover:text-[#007AFF]"
@@ -289,48 +300,49 @@ export default function Home() {
           <div>
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-[#007AFF]">
               <span className="h-2 w-2 rounded-full bg-[#007AFF]" />
-              Technology . Energy . Engineering
+              Technology · Energy · Engineering
             </div>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[1.03] tracking-[-0.04em] text-[#071A33] sm:text-6xl lg:text-7xl">
-  Building smarter{" "}
-  <span className="text-[#007AFF]">
-    solutions for tomorrow.
-  </span>
-</h1>
+              Building smarter{" "}
+              <span className="text-[#007AFF]">
+                solutions for tomorrow.
+              </span>
+            </h1>
 
-<div className="hero-marquee mt-7">
-  <div className="hero-marquee-track text-xl font-bold sm:text-2xl">
-    <span className="hero-marquee-item text-[#071A33]">
-      Technology that solves.
-    </span>
+            <div className="hero-marquee mt-7">
+              <div className="hero-marquee-track text-xl font-bold sm:text-2xl">
+                <span className="hero-marquee-item text-[#071A33]">
+                  Technology that solves.
+                </span>
 
-    <span className="hero-marquee-item text-[#007AFF]">
-      Solutions that move business forward.
-    </span>
+                <span className="hero-marquee-item text-[#007AFF]">
+                  Solutions that move business forward.
+                </span>
 
-    <span className="hero-marquee-item text-[#071A33]">
-      Technology that solves.
-    </span>
+                <span className="hero-marquee-item text-[#071A33]">
+                  Technology that solves.
+                </span>
 
-    <span className="hero-marquee-item text-[#007AFF]">
-      Solutions that move business forward.
-    </span>
-  </div>
-</div>
+                <span className="hero-marquee-item text-[#007AFF]">
+                  Solutions that move business forward.
+                </span>
+              </div>
+            </div>
 
-<p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-  Technovate Global Solutions delivers technology, AI, solar,
-  electrical, procurement, and engineering solutions that help
-  businesses and individuals solve real-world problems.
-</p>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+              Technovate Global Solutions delivers technology, AI, solar,
+              electrical, procurement, and engineering solutions that help
+              businesses and individuals solve real-world problems.
+            </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center rounded-full bg-[#007AFF] px-7 py-4 font-bold text-white shadow-xl shadow-blue-500/20 transition hover:-translate-y-1 hover:bg-[#0066D6]"
               >
-                Start a Project <span className="ml-2"></span>
+                Start a Project
+                <span className="ml-2">→</span>
               </a>
 
               <a
@@ -343,7 +355,9 @@ export default function Home() {
 
             <div className="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-slate-200 pt-7">
               <div>
-                <div className="text-2xl font-black text-[#071A33]">4+</div>
+                <div className="text-2xl font-black text-[#071A33]">
+                  {services.length}+
+                </div>
                 <div className="mt-1 text-xs font-medium text-slate-500">
                   Core Service Areas
                 </div>
@@ -359,7 +373,9 @@ export default function Home() {
               </div>
 
               <div>
-                <div className="text-2xl font-black text-[#071A33]">360°</div>
+                <div className="text-2xl font-black text-[#071A33]">
+                  360°
+                </div>
                 <div className="mt-1 text-xs font-medium text-slate-500">
                   Solution Approach
                 </div>
@@ -384,22 +400,22 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     {
-                      icon: "",
+                      icon: "⌘",
                       title: "Technology",
                       detail: "Software & AI",
                     },
                     {
-                      icon: "",
+                      icon: "☀",
                       title: "Energy",
                       detail: "Solar Solutions",
                     },
                     {
-                      icon: "",
+                      icon: "⚡",
                       title: "Engineering",
                       detail: "Electrical Services",
                     },
                     {
-                      icon: "",
+                      icon: "▣",
                       title: "Supply",
                       detail: "Procurement & Contracts",
                     },
@@ -409,7 +425,11 @@ export default function Home() {
                       className="rounded-2xl bg-white/10 p-5"
                     >
                       <div className="mb-8 text-3xl">{item.icon}</div>
-                      <div className="font-bold text-white">{item.title}</div>
+
+                      <div className="font-bold text-white">
+                        {item.title}
+                      </div>
+
                       <div className="mt-1 text-xs leading-5 text-blue-100">
                         {item.detail}
                       </div>
@@ -425,7 +445,7 @@ export default function Home() {
               </div>
 
               <div className="mt-1 font-bold text-[#071A33]">
-                Ideas ’ Engineering ’ Impact
+                Ideas · Engineering · Impact
               </div>
             </div>
           </div>
@@ -454,64 +474,56 @@ export default function Home() {
           <div className="mt-14 grid gap-5 md:grid-cols-2">
             {services.map((service) => (
               <article
-  key={service.number}
-  className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-900/5"
->
-  {/* Service Image */}
-  <div className="relative h-56 overflow-hidden">
-    <img
-      src={service.image}
-      alt={service.title}
-      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-    />
+                key={service.number}
+                className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-900/5"
+              >
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
 
-    <div className="absolute inset-0 bg-gradient-to-t from-[#071A33]/80 via-[#071A33]/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071A33]/80 via-[#071A33]/10 to-transparent" />
 
-    <div className="absolute left-6 top-6">
-      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#007AFF] text-sm font-black text-white shadow-lg">
-        {service.number}
-      </span>
-    </div>
+                  <div className="absolute left-6 top-6">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#007AFF] text-sm font-black text-white shadow-lg">
+                      {service.number}
+                    </span>
+                  </div>
 
-    <div className="absolute bottom-5 left-6 right-6">
-      <div className="text-xs font-bold uppercase tracking-[0.16em] text-blue-200">
-        Technovate Service
-      </div>
+                  <div className="absolute bottom-5 left-6 right-6">
+                    <div className="text-xs font-bold uppercase tracking-[0.16em] text-blue-200">
+                      Technovate Service
+                    </div>
 
-      <h3 className="mt-1 text-2xl font-black text-white">
-        {service.title}
-      </h3>
-    </div>
-  </div>
+                    <h3 className="mt-1 text-2xl font-black text-white">
+                      {service.title}
+                    </h3>
+                  </div>
+                </div>
 
-  {/* Service Details */}
-  <div className="p-7">
-    <div className="flex items-start justify-between gap-4">
-      <p className="leading-7 text-slate-600">
-        {service.description}
-      </p>
+                <div className="p-7">
+                  <p className="leading-7 text-slate-600">
+                    {service.description}
+                  </p>
 
-      <span className="shrink-0 text-2xl text-slate-300 transition group-hover:text-[#007AFF]">
-        
-      </span>
-    </div>
+                  <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                    {service.items.map((item) => (
+                      <div
+                        key={item}
+                        className="flex items-center gap-2 text-sm font-medium text-slate-700"
+                      >
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-50 text-xs font-bold text-[#007AFF]">
+                          ✓
+                        </span>
 
-    <div className="mt-7 grid gap-3 sm:grid-cols-2">
-      {service.items.map((item) => (
-        <div
-          key={item}
-          className="flex items-center gap-2 text-sm font-medium text-slate-700"
-        >
-          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-50 text-xs font-bold text-[#007AFF]">
-            “
-          </span>
-
-          {item}
-        </div>
-      ))}
-    </div>
-  </div>
-</article>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -539,9 +551,10 @@ export default function Home() {
 
             <a
               href="#contact"
-              className="font-bold text-[#007AFF] hover:underline"
+              className="inline-flex items-center gap-1 font-bold text-[#007AFF] hover:underline"
             >
-              Discuss a Project ’
+              Discuss a Project
+              <span>→</span>
             </a>
           </div>
 
@@ -581,7 +594,6 @@ export default function Home() {
               );
 
               const visual = projectVisuals[projectIndex];
-
               const isDarkVisual = projectIndex % 2 === 0;
 
               return (
@@ -660,10 +672,6 @@ export default function Home() {
                       <span className="inline-flex rounded-full bg-blue-50 px-3 py-1.5 text-xs font-black text-[#0066D6]">
                         {project.status}
                       </span>
-
-                      <span className="text-slate-300 transition duration-300 group-hover:translate-x-1 group-hover:text-[#007AFF]">
-                        
-                      </span>
                     </div>
 
                     <p className="mt-5 leading-7 text-slate-600">
@@ -700,7 +708,7 @@ export default function Home() {
                           {"linkLabel" in project && project.linkLabel
                             ? project.linkLabel
                             : "View Project"}
-                          <span></span>
+                          <span>→</span>
                         </a>
                       ) : (
                         <a
@@ -708,7 +716,7 @@ export default function Home() {
                           className="inline-flex items-center gap-1 text-sm font-black text-[#007AFF] transition-all duration-300 group-hover:gap-2"
                         >
                           Enquire about this project
-                          <span>’</span>
+                          <span>→</span>
                         </a>
                       )}
                     </div>
@@ -821,7 +829,9 @@ export default function Home() {
 
                 <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                   Have a challenge?
-                  <span className="block">Let's build the solution.</span>
+                  <span className="block">
+                    Let's build the solution.
+                  </span>
                 </h2>
 
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-blue-50">
@@ -858,6 +868,7 @@ export default function Home() {
                   <div className="text-xs font-bold uppercase tracking-[0.14em] text-blue-100">
                     Phone
                   </div>
+
                   <div className="mt-2 font-bold">
                     +234 905 797 1912
                   </div>
@@ -870,6 +881,7 @@ export default function Home() {
                   <div className="text-xs font-bold uppercase tracking-[0.14em] text-blue-100">
                     Email
                   </div>
+
                   <div className="mt-2 break-all font-bold">
                     technovateglobalsolutions@gmail.com
                   </div>
@@ -884,6 +896,7 @@ export default function Home() {
                   <div className="text-xs font-bold uppercase tracking-[0.14em] text-blue-100">
                     WhatsApp
                   </div>
+
                   <div className="mt-2 font-bold">
                     +234 905 797 1912
                   </div>
@@ -898,6 +911,7 @@ export default function Home() {
                   <div className="text-xs font-bold uppercase tracking-[0.14em] text-blue-100">
                     Facebook
                   </div>
+
                   <div className="mt-2 font-bold">
                     Technovate Global Solutions
                   </div>
