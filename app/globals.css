@@ -67,3 +67,28 @@ img {
     width: min(100% - 28px, 1180px);
   }
 }
+@keyframes heroTextMarquee {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.hero-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.hero-marquee-track {
+  display: inline-flex;
+  width: max-content;
+  animation: heroTextMarquee 18s linear infinite;
+}
+
+.hero-marquee-item {
+  padding-right: 4rem;
+}

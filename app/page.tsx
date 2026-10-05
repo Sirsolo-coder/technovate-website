@@ -289,28 +289,48 @@ export default function Home() {
           <div>
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-[#007AFF]">
               <span className="h-2 w-2 rounded-full bg-[#007AFF]" />
-              Technology â€¢ Energy â€¢ Engineering
+              Technology . Energy . Engineering
             </div>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[1.03] tracking-[-0.04em] text-[#071A33] sm:text-6xl lg:text-7xl">
-              Building smarter{" "}
-              <span className="text-[#007AFF]">
-                solutions for tomorrow.
-              </span>
-            </h1>
+  Building smarter{" "}
+  <span className="text-[#007AFF]">
+    solutions for tomorrow.
+  </span>
+</h1>
 
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-              Technovate Global Solutions delivers technology, AI, solar,
-              electrical, procurement, and engineering solutions that help
-              businesses and individuals solve real-world problems.
-            </p>
+<div className="hero-marquee mt-7">
+  <div className="hero-marquee-track text-xl font-bold sm:text-2xl">
+    <span className="hero-marquee-item text-[#071A33]">
+      Technology that solves.
+    </span>
+
+    <span className="hero-marquee-item text-[#007AFF]">
+      Solutions that move business forward.
+    </span>
+
+    <span className="hero-marquee-item text-[#071A33]">
+      Technology that solves.
+    </span>
+
+    <span className="hero-marquee-item text-[#007AFF]">
+      Solutions that move business forward.
+    </span>
+  </div>
+</div>
+
+<p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+  Technovate Global Solutions delivers technology, AI, solar,
+  electrical, procurement, and engineering solutions that help
+  businesses and individuals solve real-world problems.
+</p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center rounded-full bg-[#007AFF] px-7 py-4 font-bold text-white shadow-xl shadow-blue-500/20 transition hover:-translate-y-1 hover:bg-[#0066D6]"
               >
-                Start a Project <span className="ml-2">â†’</span>
+                Start a Project <span className="ml-2"></span>
               </a>
 
               <a
@@ -339,7 +359,7 @@ export default function Home() {
               </div>
 
               <div>
-                <div className="text-2xl font-black text-[#071A33]">360Â°</div>
+                <div className="text-2xl font-black text-[#071A33]">360°</div>
                 <div className="mt-1 text-xs font-medium text-slate-500">
                   Solution Approach
                 </div>
@@ -364,22 +384,22 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     {
-                      icon: "âŒ˜",
+                      icon: "",
                       title: "Technology",
                       detail: "Software & AI",
                     },
                     {
-                      icon: "â˜€",
+                      icon: "",
                       title: "Energy",
                       detail: "Solar Solutions",
                     },
                     {
-                      icon: "âš¡",
+                      icon: "",
                       title: "Engineering",
                       detail: "Electrical Services",
                     },
                     {
-                      icon: "â—ˆ",
+                      icon: "",
                       title: "Supply",
                       detail: "Procurement & Contracts",
                     },
@@ -405,7 +425,7 @@ export default function Home() {
               </div>
 
               <div className="mt-1 font-bold text-[#071A33]">
-                Ideas â†’ Engineering â†’ Impact
+                Ideas ’ Engineering ’ Impact
               </div>
             </div>
           </div>
@@ -472,7 +492,7 @@ export default function Home() {
       </p>
 
       <span className="shrink-0 text-2xl text-slate-300 transition group-hover:text-[#007AFF]">
-        â†—
+        
       </span>
     </div>
 
@@ -483,7 +503,7 @@ export default function Home() {
           className="flex items-center gap-2 text-sm font-medium text-slate-700"
         >
           <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-50 text-xs font-bold text-[#007AFF]">
-            âœ“
+            “
           </span>
 
           {item}
@@ -521,7 +541,7 @@ export default function Home() {
               href="#contact"
               className="font-bold text-[#007AFF] hover:underline"
             >
-              Discuss a Project â†’
+              Discuss a Project ’
             </a>
           </div>
 
@@ -642,7 +662,7 @@ export default function Home() {
                       </span>
 
                       <span className="text-slate-300 transition duration-300 group-hover:translate-x-1 group-hover:text-[#007AFF]">
-                        â†—
+                        
                       </span>
                     </div>
 
@@ -680,7 +700,7 @@ export default function Home() {
                           {"linkLabel" in project && project.linkLabel
                             ? project.linkLabel
                             : "View Project"}
-                          <span>â†—</span>
+                          <span></span>
                         </a>
                       ) : (
                         <a
@@ -688,7 +708,7 @@ export default function Home() {
                           className="inline-flex items-center gap-1 text-sm font-black text-[#007AFF] transition-all duration-300 group-hover:gap-2"
                         >
                           Enquire about this project
-                          <span>â†’</span>
+                          <span>’</span>
                         </a>
                       )}
                     </div>
@@ -898,7 +918,7 @@ export default function Home() {
         <div className="container flex flex-col justify-between gap-6 md:flex-row md:items-center">
           <div>
             <div className="font-black tracking-tight text-[#071A33]">
-              TECHNOVATE GLOBAL SOLUTIONS LTD
+              TECHNOVATE GLOBAL SOLUTIONS LIMITED
             </div>
 
             <p className="mt-1 text-sm text-slate-500">
